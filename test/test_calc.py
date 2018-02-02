@@ -26,6 +26,7 @@ class TestPolishCalculator(unittest.TestCase):
     def test_trig(self):
         self.assertAlmostEqual(eval_expr("1 pi sin +"), 1)
         self.assertAlmostEqual(eval_expr("pi cos 8 *"), -8)
+        self.assertAlmostEqual(eval_expr("pi 4 / tan"), 1)
 
     def test_cond(self):
         self.assertEqual(eval_expr("0 1 2 ?"), 2)
