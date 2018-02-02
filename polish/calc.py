@@ -154,26 +154,6 @@ def _tokenize(expr):
     return result
 
 
-def _run_tests():
-    tests = [
-        ("3 5 * 2 + 7 -", 10),
-        ("3 5 10 + *", 45),
-        ("1 3.14 sin +", 1),
-        ("1", 1),
-        ("2 pi *", 6.28),
-        ("x 3 =", 3),
-        ("x", 3)
-    ]
-
-    for test in tests:
-        expr = test[0]
-        expected = test[1]
-        tokens = _tokenize(expr)
-        result = _eval(tokens)
-        print('Test "{}", expected: {}, actual: {}'
-              .format(expr, expected, result))
-
-
 def eval_expr(expr):
     return _eval(_tokenize(expr))
 
