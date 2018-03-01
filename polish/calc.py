@@ -51,7 +51,8 @@ def _assignment(target, value):
 
 
 def _cond(predicate, iftrue, otherwise):
-    return (_lookup(iftrue) if bool(_lookup(predicate)) else _lookup(otherwise))
+    return (_lookup(iftrue) if bool(_lookup(predicate))
+            else _lookup(otherwise))
 
 
 _OPERATORS = {
